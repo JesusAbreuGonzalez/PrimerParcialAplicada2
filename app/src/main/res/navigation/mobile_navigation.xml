@@ -16,4 +16,9 @@
         android:name="com.example.primerparcialaplicada2.ui.ProductoEdit.ProductoEditFragment"
         android:label="@string/registro_producto"
         tools:layout="@layout/producto_edit_fragment" />
+    <fragment
+        android:id="@+id/productoListFragment"
+        android:name="com.example.primerparcialaplicada2.ui.ProductoList.ProductoListFragment"
+        android:label="@string/ListaProductos"
+        tools:layout="@layout/producto_list_fragment" />
 </navigation>

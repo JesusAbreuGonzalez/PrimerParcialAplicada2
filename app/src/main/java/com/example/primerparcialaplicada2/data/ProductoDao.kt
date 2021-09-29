@@ -1,5 +1,6 @@
 package com.example.primerparcialaplicada2.data
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.primerparcialaplicada2.models.Producto
 
@@ -17,4 +18,7 @@ interface ProductoDao {
 
     @Query("select * from Producto where ProductoId = :key")
     suspend fun Find(key:Long) : Producto?
+
+    @Query("select * from Producto order by ProductoId asc")
+    fun Lista() : LiveData<List<Producto>>
 }

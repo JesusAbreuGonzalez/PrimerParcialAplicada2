@@ -31,8 +31,9 @@ class ProductoEditFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         viewModel = ViewModelProvider(this, ProductoEditViewModel.Factory(requireActivity().application))
             .get(ProductoEditViewModel::class.java)
 
@@ -55,7 +56,7 @@ class ProductoEditFragment : Fragment() {
         }
 
         binding.nuevoButton.setOnClickListener{
-           Limpiar()
+            Limpiar()
         }
 
         binding.eliminarButton.setOnClickListener{
@@ -63,7 +64,6 @@ class ProductoEditFragment : Fragment() {
             it.showMessage("Producto eliminado")
             Limpiar()
         }
-
     }
 
 

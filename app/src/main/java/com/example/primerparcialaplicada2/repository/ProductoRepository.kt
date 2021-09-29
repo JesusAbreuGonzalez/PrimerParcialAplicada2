@@ -1,6 +1,7 @@
 package com.example.primerparcialaplicada2.repository
 
 import android.provider.ContactsContract
+import androidx.lifecycle.LiveData
 import androidx.room.PrimaryKey
 import androidx.room.Update
 import com.example.primerparcialaplicada2.data.ProductoDb
@@ -21,5 +22,9 @@ class ProductoRepository(private val database: ProductoDb) {
 
     suspend fun Find(ProductoId: Long){
         database.productoDao.Find(ProductoId)
+    }
+
+    fun Lista(): LiveData<List<Producto>>{
+        return database.productoDao.Lista()
     }
 }

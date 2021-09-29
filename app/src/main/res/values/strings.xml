@@ -19,4 +19,5 @@
     <string name="eliminar">Eliminar</string>
     <string name="registro_producto">Registro Producto</string>
     <string name="producto_id">Producto Id</string>
+    <string name="ListaProductos">Lista de Productos</string>
 </resources>
